@@ -1,5 +1,5 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export function ClientComponent() {
   const [todos, setTodos] = useState<{ title: string }[]>([]);
@@ -8,7 +8,7 @@ export function ClientComponent() {
     (async function () {
       const todos = (
         await axios.get<{ title: string }[]>(
-          "https://jsonplaceholder.typicode.com/todos?userId=1",
+          'https://jsonplaceholder.typicode.com/todos?userId=1',
         )
       ).data;
       console.log({ todos });

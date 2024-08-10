@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 
 export async function ServerComponent() {
   const res = await axios.get<{ title: string }[]>(
-    "https://jsonplaceholder.typicode.com/todos",
+    'https://jsonplaceholder.typicode.com/todos',
   );
   const todos = res.data;
 

@@ -1,6 +1,6 @@
-import styles from "./index.module.css";
+import styles from './index.module.css';
 
-type Props = React.PropsWithChildren<React.ComponentPropsWithRef<"button">>;
+type Props = React.PropsWithChildren<React.ComponentPropsWithRef<'button'>>;
 
 export function Button({ children, ...rest }: Props) {
   return (
