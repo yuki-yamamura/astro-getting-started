@@ -8,7 +8,7 @@ export function ClientComponent() {
     (async function () {
       const todos = (
         await axios.get<{ title: string }[]>(
-          "https://jsonplaceholder.typicode.com/todos?userId=1"
+          "https://jsonplaceholder.typicode.com/todos?userId=1",
         )
       ).data;
       console.log({ todos });

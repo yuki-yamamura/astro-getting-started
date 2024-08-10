@@ -1,7 +1,15 @@
 ---
 import { ButtonWithAlert } from '../components/ButtonWithAlert';
+
 import { ClientComponent } from '../components/ClientComponent';
 import SomeAstroComponent from '../components/SomeAstroComponent/index.astro';
+import axios from 'axios';
+
+const res = await axios.get<{ name: string }[]>(
+	"https://jsonplaceholder.typicode.com/users"
+);
+
+const users = res.data;
 ---
 
 <html lang="en">
@@ -20,6 +28,12 @@ import SomeAstroComponent from '../components/SomeAstroComponent/index.astro';
 <!-- RSC is not working within Astro componnet  -->
 <!-- <ServerComponent /> -->
  <ClientComponent client:load />
+<ul>
+      {users.map((user) => (
+        <li>{user.name}</li>
+      ))}
+    </ul>
+
 		</div>
 	</body>
 </html>
