@@ -1,5 +1,6 @@
 ---
 import { ButtonWithAlert } from '../components/ButtonWithAlert';
+import SomeAstroComponent from '../components/SomeAstroComponent/index.astro';
 ---
 
 <html lang="en">
@@ -14,6 +15,7 @@ import { ButtonWithAlert } from '../components/ButtonWithAlert';
 		<h1>Astro</h1>
 		<div>
 <ButtonWithAlert client:load />
+<SomeAstroComponent text='baby' />
 		</div>
 	</body>
 </html>
