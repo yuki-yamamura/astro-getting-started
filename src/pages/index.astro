@@ -1,5 +1,6 @@
 ---
 import { ButtonWithAlert } from '../components/ButtonWithAlert';
+import { ClientComponent } from '../components/ClientComponent';
 import SomeAstroComponent from '../components/SomeAstroComponent/index.astro';
 ---
 
@@ -16,6 +17,9 @@ import SomeAstroComponent from '../components/SomeAstroComponent/index.astro';
 		<div>
 <ButtonWithAlert client:load />
 <SomeAstroComponent text='baby' />
+<!-- RSC is not working within Astro componnet  -->
+<!-- <ServerComponent /> -->
+ <ClientComponent client:load />
 		</div>
 	</body>
 </html>
