@@ -1,0 +1,39 @@
+---
+export async function getStaticPaths() {
+  return Promise.resolve([
+    {
+      params: {
+        page: '1',
+      },
+      props: {
+        message: 'foo',
+      },
+    },
+    {
+      params: {
+        page: '2',
+      },
+      props: {
+        message: 'bar',
+      },
+    },
+    {
+      params: {
+        page: '3',
+      },
+      props: {
+        message: 'hoge',
+      },
+    },
+  ]);
+}
+
+const { page } = Astro.params;
+const { message } = Astro.props;
+---
+
+<h1>{`current page index is ${page}.`}</h1>
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, quibusdam!
+</p>
+<p>{message}</p>
