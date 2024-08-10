@@ -1,0 +1,7 @@
+.module {
+  color: white;
+  background-color: green;
+  border: none;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
