@@ -1,0 +1,11 @@
+---
+import { Name } from '../../components/Name';
+
+export const prerender = false;
+
+const nameCookie = Astro.cookies.get('name');
+const name = nameCookie ? nameCookie.value : 'anonimous';
+---
+
+<Name client:load />
+<div>{`Hello, ${name}!`}</div>
