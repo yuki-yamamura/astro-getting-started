@@ -19,7 +19,14 @@ const users = res.data;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
-  </head><body>
+  </head>
+  <body
+    style={{
+      maxWidth: '980px',
+      width: '100%',
+      marginInline: 'auto',
+    }}
+  >
     <h1>Astro</h1>
     <div>
       <ButtonWithAlert client:load />

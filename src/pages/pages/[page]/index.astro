@@ -30,10 +30,21 @@ export async function getStaticPaths() {
 
 const { page } = Astro.params;
 const { message } = Astro.props;
+
+const isOdd = Number(page) % 2 === 1;
 ---
+
+<style>
+  .odd {
+    color: brown;
+  }
+  .odd::before {
+    content: 'odd ';
+  }
+</style>
 
 <h1>{`current page index is ${page}.`}</h1>
 <p>
   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, quibusdam!
 </p>
-<p>{message}</p>
+<p class:list={[{ odd: isOdd }]}>{message}</p>
